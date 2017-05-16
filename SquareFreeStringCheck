@@ -8,7 +8,8 @@ console.log("Square String Check:"+isSquareFree("afar"));
 
 function isSquareFree(s) {
   
-  //Note :Comment by sumit A square is a string that can be divided into two identical substrings.
+  //Note :Comment by sumit
+  //A Square Free word has no adjacent repeating substring
   // O(N)-time algorithm to test if a given string of length N is square-free.
   
   // 1) divide the string into the two part if both substring are same the string is Square else Square free string.
