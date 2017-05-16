@@ -3,7 +3,7 @@
 <script language="javascript" type="text/javascript">
 
 //following line are use to call the function and give the input.
-console.log("Square String Check:"+isSquareFree("abas"));
+console.log("Square String Check:"+isSquareFree("afar"));
 
 
 function isSquareFree(s) {
@@ -39,19 +39,28 @@ function isSquareFree(s) {
     console.log("Index 2:"+strsplit[1]);
     console.log("Index 3:"+strsplit[2]);
     console.log("index 4:"+strsplit[3]);
+	var flag;
   
-  for(var i=0;i<str.length-1;i++)
-  {
-	if(strsplit[i]==strsplit[i+1])
-	{
-		return "not squarefree";
+		  for(var i=0;i<str.length;i++)
+		  {
+			if(strsplit[i]==strsplit[i+1])
+			{
+				flag=true;
+				break;
+			}
+			else
+			{
+				flag=false;
+			}
+		  }
+	if(flag==true)
+	{ 
+	  return "not squarefree";
 	}
 	else
 	{
-		return "square-free";
+	return "SquareFree";
 	}
-  }
-	
   }
   
 }
