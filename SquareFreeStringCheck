@@ -1,0 +1,63 @@
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+
+//following line are use to call the function and give the input.
+console.log("Square String Check:"+isSquareFree("abas"));
+
+
+function isSquareFree(s) {
+  
+  //Note :Comment by sumit A square is a string that can be divided into two identical substrings.
+  // O(N)-time algorithm to test if a given string of length N is square-free.
+  
+  // 1) divide the string into the two part if both substring are same the string is Square else Square free string.
+  // 2) Split the String into array and check the adjacent position of the String if adj is same String is not-SquareFree else String is Square free..
+  
+  var str=s;
+  var len=str.length;
+  console.log("Length of the String:"+len);
+  
+  //divide the string into the two parts.
+  var str1=str.substr(0, len/2);
+  var str2=str.substr(len/2,len);
+  
+  console.log("String 1:"+str1)
+  console.log("String 2:"+str2);
+   
+  if(str1==str2)
+  {
+    return "not squarefree";
+  }
+  else
+  {
+    
+	//split the String 
+    var strsplit=str.split("");
+    console.log("Split String:"+strsplit);
+    console.log("Index 1:"+strsplit[0]);
+    console.log("Index 2:"+strsplit[1]);
+    console.log("Index 3:"+strsplit[2]);
+    console.log("index 4:"+strsplit[3]);
+  
+  for(var i=0;i<str.length-1;i++)
+  {
+	if(strsplit[i]==strsplit[i+1])
+	{
+		return "not squarefree";
+	}
+	else
+	{
+		return "square-free";
+	}
+  }
+	
+  }
+  
+}
+</script>
+</head>
+<body>
+<h1>Test Square Free String..</h1>
+</body>
+</html>
